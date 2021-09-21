@@ -152,8 +152,8 @@ while True:
         # thanks to github.com/th3unkn0n for the snippet below
         print(f'\n{lg}[i] Checking for updates...')
         try:
-            # https://raw.githubusercontent.com/infotechbro/IdkVro/main/version.txt
-            version = requests.get('https://raw.githubusercontent.com/infotechbro/IdkVro/main/version.txt')
+            # https://raw.githubusercontent.com/infotechbro/IdkVro/master/version.txt
+            version = requests.get('https://raw.githubusercontent.com/infotechbro/IdkVro/master/version.txt')
         except:
             print(f'{r} You are not connected to the internet')
             print(f'{r} Please connect to the internet and retry')
@@ -164,13 +164,13 @@ while True:
                 print(f'{lg}[i] Downloading updates...')
                 if os.name == 'nt':
                     os.system('del add.py')
-                    os.system('del manager.py')
+                    os.system('del setup.py')
                 else:
                     os.system('rm add.py')
-                    os.system('rm manager.py')
+                    os.system('rm setup.py')
                 #os.system('del scraper.py')
-                os.system('curl -l -O https://raw.githubusercontent.com/infotechbro/IdkVro/main/add.py')
-                os.system('curl -l -O https://raw.githubusercontent.com/infotechbro/IdkVro/main/manager.py')
+                os.system('curl -l -O https://raw.githubusercontent.com/infotechbro/IdkVro/master/add.py')
+                os.system('curl -l -O https://raw.githubusercontent.com/infotechbro/IdkVro/master/setup.py')
                 print(f'{lg}[*] Updated to version: {version.text}')
                 input('Press enter to exit...')
                 exit()
